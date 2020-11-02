@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS first steps</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>CSS first steps</header>
+            <a class="nav-link first" href="#introduction">Introduction</a>
+            <a class="nav-link" href="#Prerequisites">Prerequisites</a>
+            <a class="nav-link" href="#CSS_syntax">CSS syntax</a>
+            <a class="nav-link" href="#CSS_Modules">CSS Modules</a>
+            <a class="nav-link" href="#Adding_CSS">Adding CSS</a>
+            <a class="nav-link" href="#Styling_HTML">Styling HTML</a>
+            <a class="nav-link last" href="#Reference">Reference</a>
+        </nav>
+        <main id="main-doc">
+            <section id="introduction" class="main-section">
+                <header>Introduction</header>
+                <p>CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is, with a simple syntax example, and also covers some key terms about the language.</p>
+                <p>CSS can be used for very basic document text styling — for example changing the color and size of headings and links. It can be used to create layout — for example turning a single column of text into a layout with a main content area and a sidebar for related information. It can even be used for effects such as animation. Have a look at the links in this paragraph for specific examples.</p>
+            </section>
+            <section id="Prerequisites" class="main-section">
+                <header>Prerequisites</header>
+                <p>Before starting this module, you should have:</p>
+                <ol>
+                    <li>Basic familiarity with using computers, and using the Web passively (i.e. looking at it, consuming the content.)</li>
+                    <li>A basic work environment set up and an understanding of how to create and manage files.</li>
+                    <li>Basic familiarity with HTML.</li>
+                </ol>
+            </section>
+            <section id="CSS_syntax" class="main-section">
+                <header>CSS syntax</header>
+                <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page. For example "I want the main heading on my page to be shown as large red text."</p>
+                <p>The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+                <code>h1 {
+                    color: red;
+                    font-size: 5em;
+                    }
+                </code>
+                <p>The rule opens with a selector . This selects the HTML element that we are going to style. In this case we are styling level one headings (&lth&gt).</p>
+            </section>
+            <section id="CSS_Modules" class="main-section">
+                <header>CSS Modules</header>
+                <p>As there are so many things that you could style using CSS, the language is broken down into modules. You'll see reference to these modules as you explore MDN and many of the documentation pages are organized around a particular module. For example, you could take a look at the MDN reference to the Backgrounds and Borders module to find out what its purpose is, and what different properties and other features it contains. You will also find links to the CSS Specification that defines the technology (see below).</p>
+                <p>At this stage you don't need to worry too much about how CSS is structured, however it can make it easier to find information if, for example, you are aware that a certain property is likely to be found among other similar things and are therefore probably in the same specification. </p>
+            </section>
+            <section id="Adding_CSS" class="main-section">
+                <header>Adding CSS</header>
+                <p>The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.</p>
+                <ul>
+                    <li>Create a file in the same folder as your HTML document and save it as styles.css. The .css extension shows that this is a CSS file.To link styles.css to index.html add the following line somewhere inside the &lthead&gt of the HTML document:</li>
+                </ul>
+                <code>&ltlink rel="stylesheet" href="styles.css"&gt</code>
+                <ul>
+                    <li>This &ltlink&gt element tells the browser that we have a stylesheet, using the rel attribute, and the location of that stylesheet as the value of the href attribute. You can test that the CSS works by adding a rule to styles.css. Using your code editor add the following to your CSS file:</li>
+                </ul>
+                <code>h1 {
+                        color: red;
+                      }
+                </code>
+            </section>
+            <section id="Styling_HTML" class="main-section">
+                <header>Styling HTML</header>
+                <p>By making our heading red we have already demonstrated that we can target and style an HTML element. We do this by targeting an element selector — this is a selector that directly matches an HTML element name. To target all paragraphs in the document you would use the selector p. To turn all paragraphs green you would use:</p>
+                <code>p {
+                    color: green;
+                  }</code>
+                <p>You can target multiple selectors at once, by separating the selectors with a comma. If I want all paragraphs and all list items to be green my rule looks like this:</p>
+                <code>p, li {
+                    color: green;
+                }</code>
+                <p>This is just a taste of CSS.</p>
+            </section>
+            <section id="Reference" class="main-section">
+                <header>Reference</header>
+                <div id="circle"></div>
+                <p id="ref">All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps">MDN</a></p>
+            </section>
+        </main>
+    </body>
+</html>

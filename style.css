@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 3.5vh;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    color: rgb(68, 68, 68);
+    font-size: 2.5vh;
+}
+
+#navbar {
+    margin-top: -2vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 14%;
+    height: 100%;
+    border-right: 2px solid rgb(58, 58, 58);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    color: black;
+    font-size: 1.6rem;
+    margin: 2vh auto;
+}
+
+#navbar header {
+    margin-top: 2vh;
+    margin-bottom: 0;
+    padding-top: 2vh;
+    width: 14%;
+    height: 8%;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    position: fixed;
+}
+
+.first{
+    padding-top: 14vh;
+}
+
+.nav-link {
+    color: rgb(68, 68, 68);
+    font-size: 1.16rem;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding-bottom: 15%;
+    text-align: center;
+    margin: 2vh auto;
+    border-bottom: 1px solid black;
+}
+
+
+.last {
+    border-bottom: none;
+}
+
+#main-doc {
+    margin-left: 16.4%;
+    width: 80%;
+}
+
+.main-section p {
+    margin-left: 1vw;
+    margin-bottom: 1vh;
+}
+
+.main-section li {
+    margin-left: 5vw;
+}
+
+code {
+    margin-left: 1vw;
+    text-indent: 3vw;
+    padding-top: 1%;
+    display: block;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#ref {
+    text-indent: 2vw;
+}
+
+@media (max-width: 1023px){
+    #navbar {
+        width: 100%;
+        height: 12%;
+        flex-direction: row;
+        border-right: none;
+        background-color: rgb(245, 245, 245);
+        border-bottom: 2px solid black;
+        overflow-x: scroll;
+    }
+    
+    #navbar header {
+        position: relative;
+        margin: 0 1vw;
+        font-size: 0.8rem;
+        width: auto;
+        height: auto;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        margin-right: 2vw;
+        width: 20%;
+        padding-bottom: 5%;
+        border: none;
+    }
+
+    .first {
+        padding-top: 0;
+        margin-left: 2vw;
+    }
+
+    .last {
+        margin: 2vh auto;
+        padding-right: 2vw;
+    }
+
+    #introduction {
+        padding-top: 10vh;
+    }
+}
